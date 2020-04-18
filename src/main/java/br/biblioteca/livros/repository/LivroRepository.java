@@ -15,4 +15,5 @@ public interface LivroRepository extends JpaRepository <Livro, Long> {
 
     @Query(value = " from #{#entityName} l left join fetch l.autor a order by l.nome desc ")
     List<Livro> listaLivros();
+
 }
